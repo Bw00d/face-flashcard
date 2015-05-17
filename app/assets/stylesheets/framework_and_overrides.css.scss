@@ -90,3 +90,7 @@ section {
   @extend .radius;
   @extend .tiny;
 }
+.footer {
+  position: fixed;
+  bottom: 0;
+}
