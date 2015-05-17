@@ -1,0 +1,13 @@
+<%= content_for :title, "New Face" %>
+
+<div id="new-face-form" class="small-12 medium-10 large-8 columns medium-centered large-centered">
+	<h2>Add a Face</h2>
+
+	<%= form_for @face do |f| %>
+
+	<%= f.text_field :name, placeholder: "NAME" %>
+	<%= f.text_field :agency, placeholder: "AGENCY" %>
+	<%= f.submit "ADD FACE", class: 'button small success' %>
+	<% end %>
+
+</div>
