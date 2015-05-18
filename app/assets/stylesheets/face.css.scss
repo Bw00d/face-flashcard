@@ -53,22 +53,27 @@ $aqua: #07c5ff;
   }
 }
 .index-avatar {
-  -moz-border-radius: 6em/6em;
-  -webkit-border-radius: 6em 6em;
-  border-radius: 6em/6em; 
-  width:6em;
-  height:6em; 
+  text-align: center;
+  -moz-border-radius: 5em/5em;
+  -webkit-border-radius: 5em 5em;
+  border-radius: 5em/5em; 
+  width:5em;
+  height:5em; 
   overflow: hidden;  
   margin-bottom: 0;
   border: 2px solid $aqua;
   margin: 0 auto;
+  float: left;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 4%;
   img {
     width: 100%;
     height: auto;
   }
 }
 #avatar-holder {
-	text-align: center;
+  text-align: center;
 }
 #study-button {
   padding-top: 100px;
@@ -94,4 +99,6 @@ $aqua: #07c5ff;
     color: #fe4880;
     }
   }
+}
+#index-faces {
 }

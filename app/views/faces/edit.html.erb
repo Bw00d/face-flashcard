@@ -3,7 +3,30 @@
 	<div id="new-face-form" class="small-12 medium-10 large-8 columns medium-centered large-centered">
 		<h2>Edit Face</h2>
 
-		<%= render 'form' %>
+		<div class="row">
+    <div id="avatar-holder" class="small-12 small-centered large-4 columns">
+      <div>
+      <% if @face.avatar? %>
+        <div class="face-avatar">
+          <%= image_tag @face.avatar.url, id: 'avatar-image' %>
+        </div>
+      <% else %>
+        <div class="face-avatar">
+          <%= image_tag 'blank.png', id: 'avatar-image' %>
+          <!-- <h4 id="add-text">Add</br>Photo</h4> -->
+        </div>
+      <% end %>
+      <%= form_for @face do |f| %>
+      </div>
+    </div> 
+    <div class="small-12 large-4 columns">
+      <%= f.file_field :avatar, id: 'avatar-file' %>
+      <%= f.text_field :name, placeholder: "NAME", class: "radius" %>
+      <%= f.text_field :agency, placeholder: "AGENCY", class: "radius" %>
+      <%= f.submit "ADD FACE", class: 'button small success radius' %>
+    </div>
+    <% end %>
+</div>
 
 	</div>
 </div>

@@ -29,9 +29,9 @@ class FacesController < ApplicationController
 		@face = Face.find(params[:id])
 		if @face.update_attributes(face_params)
 		  flash.now[:success] = "Face Updated!"
-			redirect_to @face
+			redirect_to faces_path(@face)
 		else
-			render 'edit'
+			redirect_to :back
 		end
 		# 	respond_to do |format|
 		# 		# flash.now[:success] = "face updated!"
