@@ -1,8 +1,42 @@
+$aqua: #07c5ff;
 #new-face-form {
 	h2 {
 		text-align: center;
 	}
 	.button {
 		width: 100%;
+		// background-color: #59d349;
 	}
+}
+
+.face-avatar {
+  -moz-border-radius: 8em/8em;
+  -webkit-border-radius: 8em 8em;
+  border-radius: 8em/8em; 
+  width:8em;
+  height:8em; 
+  overflow: hidden;  
+  margin-bottom: 0;
+  border: 2px solid $aqua;
+  margin: 0 auto;
+  img {
+  	width: 100%;
+  	height: auto;
+  }
+  h4 {
+  	margin-top: 3.5em;
+  	width: 4em;
+  	font-weight: bold;
+  	color: $aqua;
+  	margin-left: 1em;
+  	text-align: center;
+  	position: absolute;
+  	z-index: 2;
+  	bottom: 17%;
+  	left: 2%;
+  }
+
+}
+#avatar-holder {
+	text-align: center;
 }
