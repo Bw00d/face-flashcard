@@ -1,0 +1,21 @@
+<%= content_for :title, 'All faces' %>
+
+<div class="row">
+	<div class="small-12 medium-10 large-8 columns medium-centered large-centered">
+		<div class="row">
+			<% @faces.each do |face| %>
+			<div id="avatar-holder" class="small-12 small-centered large-4 columns">
+				<div>
+			    <div class="index-avatar">
+			      <%= image_tag face.avatar.url %>
+			    </div>
+				</div>
+			</div> 
+			<% end %>
+			<div id="study-button">
+				<p class="button radius success ">STUDY</p>
+			</div>
+
+		</div>
+	</div>
+</div>
