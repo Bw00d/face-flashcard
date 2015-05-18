@@ -37,6 +37,39 @@ $aqua: #07c5ff;
   }
 
 }
+.show-avatar {
+  -moz-border-radius: 11em/11em;
+  -webkit-border-radius: 11em 11em;
+  border-radius: 11em/11em; 
+  width:11em;
+  height:11em; 
+  overflow: hidden;  
+  margin-bottom: 0;
+  border: 2px solid $aqua;
+  margin: 0 auto;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
 #avatar-holder {
 	text-align: center;
+}
+#study-button {
+  padding-top: 100px;
+  margin: 0 auto;
+  max-width: 306px;
+  text-align: center;
+  p {
+  width: 100%;
+
+  }
+}
+#show-face {
+  #avatar-holder {
+    margin-top: 20%;
+  }
+  .show-avatar {
+    margin-bottom: 5%;
+  }
 }
