@@ -14,6 +14,9 @@
 			<% end %>
 
 		</div>
+	<div class="pagination">
+		<%= will_paginate @faces, class: 'digg_pagination' %>
+	</div>
 	</div>
 		<div id="study-button">
 			<%= link_to "STUDY", learn_path, class: "button radius success " %>

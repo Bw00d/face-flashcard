@@ -4,7 +4,7 @@ class FacesController < ApplicationController
 	end
 
 	def index
-		@faces = Face.all
+		@faces = Face.paginate(:page => params[:page], per_page: 30).order('created_at DESC')
 	end
 
 	def show
