@@ -1,4 +1,4 @@
-<%= content_for :title, @face.name %>
+<%= content_for :title, "Learn" %>
 
 <div class="row">
 	<div id="show-face" class="small-12 medium-10 large-8 columns medium-centered large-centered">
@@ -11,14 +11,11 @@
 				</div>
 			</div> 
 			<div class="small-12 medium-10 large-8 medium-centered large-centered text-center columns">
-				<h5><%= @face.name %></br><%= @face.agency%></h5>
+				<h5><%= @face.name %></br> <%= @face.agency%></h5>
 				<p><%= link_to "edit", edit_face_path(@face) %></p>
 			</div>
 			<div id="study-button">
 				<%= link_to "STUDY", learn_path, class: "button radius success " %>
-			</div>
-			<div id="new-face-button">
-				<%= link_to "ADD FACE", learn_path, class: "button radius" %>
 			</div>
 		</div>
 	</div>

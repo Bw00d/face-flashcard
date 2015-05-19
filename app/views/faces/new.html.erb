@@ -4,7 +4,7 @@
 		<h2>Add a Face</h2>
 
 		<div class="row">
-    <div id="avatar-holder" class="small-12 small-centered large-4 columns">
+    <div id="avatar-holder" class="small-12 small-centered large-8 columns">
       <div>
       <% if @face.avatar? %>
         <div class="face-avatar">
@@ -19,7 +19,7 @@
       <%= form_for @face, :url => faces_path, :html => { :multipart => true } do |f| %>
       </div>
     </div> 
-    <div class="small-12 large-4 columns">
+    <div class="small-12 medium-10 large-8 columns">
       <%= f.file_field :avatar, id: 'avatar-file' %>
       <%= f.text_field :name, placeholder: "NAME", class: "radius" %>
       <%= f.text_field :agency, placeholder: "AGENCY", class: "radius" %>

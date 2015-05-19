@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users
   resources :faces
+
+  get 'learn' => 'faces#learn'
 end

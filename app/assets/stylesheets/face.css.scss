@@ -22,6 +22,8 @@ $aqua: #07c5ff;
   img {
   	width: 100%;
   	height: auto;
+    min-height: 8em;
+    min-width: 8em;
   }
   h4 {
   	margin-top: 3.5em;
@@ -45,11 +47,12 @@ $aqua: #07c5ff;
   height:11em; 
   overflow: hidden;  
   margin-bottom: 0;
-  border: 2px solid $aqua;
   margin: 0 auto;
   img {
     width: 100%;
     height: auto;
+    min-height: 11em;
+    min-width: 11em;
   }
 }
 .index-avatar {
@@ -61,7 +64,6 @@ $aqua: #07c5ff;
   height:5em; 
   overflow: hidden;  
   margin-bottom: 0;
-  border: 2px solid $aqua;
   margin: 0 auto;
   float: left;
   margin-left: 2%;
@@ -70,6 +72,8 @@ $aqua: #07c5ff;
   img {
     width: 100%;
     height: auto;
+    min-height: 5em;
+    min-width: 5em;
   }
 }
 #avatar-holder {
@@ -80,9 +84,17 @@ $aqua: #07c5ff;
   margin: 0 auto;
   max-width: 306px;
   text-align: center;
-  p {
+  a {
   width: 100%;
 
+  }
+}
+#new-face-button {
+margin: 0 auto;
+  max-width: 306px;
+  text-align: center;
+  a {
+  width: 100%;
   }
 }
 #show-face {
@@ -100,5 +112,8 @@ $aqua: #07c5ff;
     }
   }
 }
-#index-faces {
+.alert-box {
+  background-color: #95E48A !important;
+  border: none !important;
+  margin-top: 5px !important;
 }

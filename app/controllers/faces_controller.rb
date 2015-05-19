@@ -43,9 +43,14 @@ class FacesController < ApplicationController
 		# end
 	end
 
+	def learn
+		offset = rand(Face.count)
+		@face = Face.offset(offset).first
+	end
+
 	private
 
 	def face_params
-		params.require(:face).permit(:name, :agency)
+		params.require(:face).permit(:name, :agency, :avatar)
 	end
 end
