@@ -10,6 +10,7 @@
         <div class="face-avatar">
           <%= image_tag @face.avatar.url, id: 'avatar-image' %>
         </div>
+        <div id="edit-avatar-link"><%= link_to 'edit', 'javascript:;' %></div>
       <% else %>
         <div class="face-avatar">
           <%= image_tag 'blank.png', id: 'avatar-image' %>
@@ -19,7 +20,7 @@
       <%= form_for @face, :url => faces_path, :html => { :multipart => true } do |f| %>
       </div>
     </div> 
-    <div class="small-12 medium-10 large-8 columns">
+    <div class="form-fields small-12 medium-10 large-8 columns">
       <%= f.file_field :avatar, id: 'avatar-file' %>
       <%= f.text_field :name, placeholder: "NAME", class: "radius" %>
       <%= f.text_field :agency, placeholder: "AGENCY", class: "radius" %>
@@ -47,5 +48,13 @@
 
   $("#avatar-file").change(function(){
     readURL(this);
+  });
+  // activate file upload
+  $('.face-avatar').click(function() {
+    // $('#avatar-file').trigger('click');
+    alert('clicked');
+  });
+  $('#edit-avatar-link').click(function() {
+    $('#avatar-file').trigger('click');
   });
 </script>
