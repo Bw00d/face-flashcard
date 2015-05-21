@@ -80,7 +80,7 @@ $aqua: #07c5ff;
   text-align: center;
 }
 #study-button {
-  padding-top: 100px;
+  padding-top: 10px;
   margin: 0 auto;
   max-width: 306px;
   text-align: center;
@@ -191,4 +191,32 @@ h4#add-text {
   margin: 0 auto;
   text-align: center !important;
   margin-bottom: 25px;
+}
+#choices {
+  text-align: center;
+  margin: 0 auto;
+  ul {
+    padding: 0;
+    margin-left: 0;
+  }
+  li {
+    a {
+      color: #222
+    }
+    list-style: none;
+    h5 {
+    padding: 10px 20px;
+    }
+    // h5:hover {
+    //   border: 2px solid #e1e1e1;
+    // padding: 8px 20px;
+
+    // }
+  }
+}
+.light-head {
+  color: #E1E1E1;
+}
+.correct {
+  border: 2px solid $aqua;
 }

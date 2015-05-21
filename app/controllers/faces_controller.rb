@@ -33,19 +33,16 @@ class FacesController < ApplicationController
 		else
 			redirect_to :back
 		end
-		# 	respond_to do |format|
-		# 		# flash.now[:success] = "face updated!"
-		# 		format.html  { redirect_to @face }
-		# 		# format.json { respond_with_bip(@face) }
-		# 	end
-		# else
-		# 	render 'edit'
-		# end
 	end
 
 	def learn
 		offset = rand(Face.count)
+		offset1 = rand(Face.count)
+		offset2 = rand(Face.count)
 		@face = Face.offset(offset).first
+		@choices = [Face.offset(offset).first.name,
+								Face.offset(offset1).first.name,
+								Face.offset(offset2).first.name]
 	end
 
 	private

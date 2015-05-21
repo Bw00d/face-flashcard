@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150517054544) do
+ActiveRecord::Schema.define(version: 20150519184057) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 20150517054544) do
     t.integer  "created_by"
     t.integer  "edited_by"
   end
+
+  add_index "faces", ["name"], name: "index_faces_on_name", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
