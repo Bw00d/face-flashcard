@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150523070032) do
+ActiveRecord::Schema.define(version: 20150523064543) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 20150523070032) do
     t.datetime "avatar_updated_at"
     t.integer  "created_by"
     t.integer  "edited_by"
-    t.string   "position"
   end
 
   add_index "faces", ["name"], name: "index_faces_on_name", using: :btree

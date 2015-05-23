@@ -1,0 +1,11 @@
+<div id="invitform" class="authform">
+  <%= form_for(@invitation) do |f| %>
+    <h3>Send and invitation</h3>
+    <p>Enter the email address of someone you would like to invite to use this application.</p>
+    <div class="form-group">
+      <%= f.label :email %>
+      <%= f.email_field :email, :autofocus => true, class: 'form-control' %>
+    </div>
+     <%= f.submit 'Send Invitation', :class => 'button small success radius' %>
+  <% end %>
+</div>
