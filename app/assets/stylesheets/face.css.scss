@@ -99,7 +99,7 @@ margin: 0 auto;
 }
 #show-face {
   #avatar-holder {
-    margin-top: 20%;
+    margin-top: 10%;
   }
   .show-avatar {
     margin-bottom: 5%;
@@ -200,6 +200,7 @@ h4#add-text {
     margin-left: 0;
   }
   li {
+    position: relative;
     a {
       color: #222
     }
@@ -216,7 +217,20 @@ h4#add-text {
 }
 .light-head {
   color: #E1E1E1;
+  margin-bottom: 20px;
 }
 .correct {
-  border: 2px solid $aqua;
+  color: #43ac6a;
+}
+.icon {
+  display: inline;
+  margin-left: -25px;
+  position: absolute;
+  display: none;
+}
+.transparent {
+  color: white !important;
+}
+.wrong {
+  color: red !important;
 }
