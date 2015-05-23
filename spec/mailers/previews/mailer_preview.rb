@@ -2,7 +2,7 @@
 class MailerPreview < ActionMailer::Preview
 
   # Preview this email at http://localhost:3000/rails/mailers/mailer/invitation
-  def invitation
+  def invitation(invitation)
     Mailer.invitation
   end
 

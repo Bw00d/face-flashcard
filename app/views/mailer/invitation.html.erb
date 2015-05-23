@@ -1,5 +1,14 @@
-<h1>Mailer#invitation</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+  	<h5>Check Out Fire Faces</h5>
 
-<p>
-  <%= @greeting %>, find me in app/views/mailer/invitation.html.erb
-</p>
+		<p>
+		 <%= @invitation.sender.name %> invited to join Fire Faces. Visit fire-faces.herokuapp.com and click the 'Sign up' link then use this code: <%= @invitation.token %>
+		</p>
+
+	</body>
+</html>

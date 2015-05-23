@@ -8,7 +8,7 @@ class InvitationsController < ApplicationController
     @invitation = Invitation.new(invitation_params)
     @invitation.sender = current_user
     if @invitation.save
-      # Mailer.deliver_invitation(@invitation, signup_url(@invitation.token))
+      Mailer.invitation(@invitation).deliver_later
       flash[:notice] = "Thank you, invitation sent."
       redirect_to faces_path
     else
