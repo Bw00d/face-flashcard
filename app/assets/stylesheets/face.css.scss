@@ -240,3 +240,52 @@ h4#add-text {
     // background-color: #59d349;
   }
 }
+
+// error messages
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+  h2 {
+    background-color: #f2dede;
+    padding: 20px;
+    color: red;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+  }
+}
+#flash_alert {
+  background-color: #f2dede;
+    padding: 20px;
+    color: red;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.alert-error {
+  background-color: #f2dede;
+  padding: 20px;
+  color: red;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}.alert-alert {
+  background-color: #f2dede;
+  padding: 20px;
+  color: red;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.alert-success {
+  background-color: #dff0d8;
+  padding: 20px;
+  margin-top: 10px;
+  color: #79a37e;
+}
+.alert-notice {
+  background-color: #fcf8e3;
+  padding: 20px;
+  margin-top: 10px;
+  color: #79a37e;
+}

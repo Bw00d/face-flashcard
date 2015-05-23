@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150523064543) do
+ActiveRecord::Schema.define(version: 20150523194429) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,17 +27,18 @@ ActiveRecord::Schema.define(version: 20150523064543) do
     t.datetime "avatar_updated_at"
     t.integer  "created_by"
     t.integer  "edited_by"
+    t.string   "position"
   end
 
   add_index "faces", ["name"], name: "index_faces_on_name", using: :btree
 
   create_table "invitations", force: :cascade do |t|
-    t.string   "email",       default: "",    null: false
-    t.string   "invite_code"
-    t.integer  "user_id"
-    t.boolean  "confirmed",   default: false
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.string   "recipient_email", default: "",    null: false
+    t.string   "token"
+    t.integer  "sender_id"
+    t.boolean  "confirmed",       default: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -54,6 +55,8 @@ ActiveRecord::Schema.define(version: 20150523064543) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+    t.integer  "invitation_id"
+    t.string   "invitation_token"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

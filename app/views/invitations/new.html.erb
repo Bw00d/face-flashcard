@@ -1,10 +1,19 @@
 <div id="invitform" class="authform">
+	<% if @invitation.errors.any? %>
+  <div id="error_explanation">
+    <ul>
+    <% @invitation.errors.full_messages.each do |msg| %>
+      <li>* <%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
   <%= form_for(@invitation) do |f| %>
     <h3>Send and invitation</h3>
     <p>Enter the email address of someone you would like to invite to use this application.</p>
     <div class="form-group">
-      <%= f.label :email %>
-      <%= f.email_field :email, :autofocus => true, class: 'form-control' %>
+      <%= f.label :recipient_email %>
+      <%= f.email_field :recipient_email, :autofocus => true, class: 'form-control' %>
     </div>
      <%= f.submit 'Send Invitation', :class => 'button small success radius' %>
   <% end %>
