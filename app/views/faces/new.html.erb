@@ -20,10 +20,11 @@
       <%= form_for @face, :url => faces_path, :html => { :multipart => true } do |f| %>
       </div>
     </div> 
-    <div class="form-fields small-12 medium-10 large-8 columns">
+    <div class="form-fields small-12 medium-10 large-8 medium-centered large-centered columns">
       <%= f.file_field :avatar, id: 'avatar-file' %>
       <%= f.text_field :name, placeholder: "NAME", class: "radius" %>
       <%= f.text_field :agency, placeholder: "AGENCY", class: "radius" %>
+      <%= f.text_field :position, placeholder: "POSITION", class: "radius" %>
       <%= f.submit "ADD FACE", class: 'button small success radius' %>
     </div>
     <% end %>

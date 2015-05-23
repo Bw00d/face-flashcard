@@ -48,6 +48,6 @@ class FacesController < ApplicationController
 	private
 
 	def face_params
-		params.require(:face).permit(:name, :agency, :avatar)
+		params.require(:face).permit(:name, :agency, :avatar, :created_by, :edited_by, :position)
 	end
 end
