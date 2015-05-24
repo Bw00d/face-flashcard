@@ -1,5 +1,30 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+   # Code is not reloaded between requests.
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_protocol => :https,
+    :s3_credentials => {
+      :bucket => ENV['S3_BUCKET_NAME'],
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
+  }
+  # Chnage mail delivery to either :smtp, :sendmail, :file, :test
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: "smtp.sendgrid.net",
+    port: 587,
+    # domain: "www.firecall.org",
+    domain: "fire-faces.herokuapp.com",
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: ENV["SENDGRID_USERNAME"],
+    password:  ENV["SENDGRID_PASSWORD"]
+  }
+
+  # config.action_mailer.default_url_options = { host: 'https://www.firecall.org'}
+  config.action_mailer.default_url_options = { host: 'https://staging-firecall.herokuapp.com'}
 
   # Code is not reloaded between requests.
   config.cache_classes = true
