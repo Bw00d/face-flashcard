@@ -21,7 +21,7 @@
 			
 		<li><p>If you somehow found this app and would like to use it but do not know of anyone who can send you a message, contact Brentwood Reid.</p></li>
 		</ul>
-		<% if user_signed_in? %>
+		<% unless user_signed_in? %>
 			<div id="new-face-button" >
 				<%= link_to "SIGNUP", 'javascript:;', class: "button radius" %>
 			</div>
