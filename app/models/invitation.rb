@@ -1,4 +1,5 @@
 class Invitation < ActiveRecord::Base
+
 	belongs_to :sender, class_name: 'User'
   has_one :recipient, class_name: 'User'
 
@@ -17,3 +18,4 @@ private
     self.token = (0..7).map { (65 + rand(26)).chr }.join
   end
 end
+
