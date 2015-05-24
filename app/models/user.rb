@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :sent_invitations, :class_name => 'Invitation', :foreign_key => 'sender_id'
   belongs_to :invitation
-  # before_validation :check_invitation
+  before_validation :check_invitation
 
   private
   def check_invitation
