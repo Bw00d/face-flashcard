@@ -21,9 +21,18 @@
 			
 		<li><p>If you somehow found this app and would like to use it but do not know of anyone who can send you a message, contact Brentwood Reid.</p></li>
 		</ul>
-	<div id="new-face-button" >
-		<%= link_to "SIGNUP", 'javascript:;', class: "button radius" %>
-	</div>
+		<% if user_signed_in? %>
+			<div id="new-face-button" >
+				<%= link_to "SIGNUP", 'javascript:;', class: "button radius" %>
+			</div>
+			<% else %>
+			<div id="study-button">
+				<%= link_to "STUDY", learn_path, class: "button radius success " %>
+			</div>
+			<div id="new-face-button">
+				<%= link_to "ADD CARD", new_face_path, class: "button radius" %>
+			</div>
+			<% end %>
 	</div>
 
 </div>
