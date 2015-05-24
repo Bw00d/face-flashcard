@@ -1,4 +1,4 @@
-<div id="invitform" class="authform">
+<div id="invitform" class="class="small-12 medium-10 large-8 columns medium-centered large-centered"">
 	<% if @invitation.errors.any? %>
   <div id="error_explanation">
     <ul>
@@ -10,11 +10,11 @@
 <% end %>
   <%= form_for(@invitation) do |f| %>
     <h3>Send and invitation</h3>
+    <div class="form-group small-12 medium-10 large-8 medium-centered large-centered columns">
     <p>Enter the email address of someone you would like to invite to use this application.</p>
-    <div class="form-group">
       <%= f.label :recipient_email %>
       <%= f.email_field :recipient_email, :autofocus => true, class: 'form-control' %>
-    </div>
      <%= f.submit 'Send Invitation', :class => 'button small success radius' %>
+    </div>
   <% end %>
 </div>
