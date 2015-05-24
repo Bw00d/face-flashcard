@@ -25,6 +25,17 @@ $aqua: #07c5ff;
   color: #a0a0a0;
   }
 }
+#home-message {
+  text-align: center;
+  margin: 0 auto;
+  p {
+  color: #a0a0a0;
+  }
+  h3,h4 {
+  text-align: justify;
+    color: #a0a0a0;
+  }
+}
 #access-message {
   p {
   text-align: justify;
@@ -33,6 +44,11 @@ $aqua: #07c5ff;
   h3,h4 {
     color: #46b3e8;
   }
+}
+.button-group {
+  margin: 0 auto;
+  text-align: center;
+
 } 
 
 .face-avatar {
