@@ -9,6 +9,23 @@ $aqua: #07c5ff;
 	}
 }
 
+// visitors#index
+#welcome-page {
+  min-height: 450px;
+  h3,h4 {
+  color: #a0a0a0;
+  }
+}
+#access-message {
+  p {
+  text-align: justify;
+  color: #a0a0a0;
+  }
+  h3,h4 {
+    color: #46b3e8;
+  }
+} 
+
 .face-avatar {
   -moz-border-radius: 8em/8em;
   -webkit-border-radius: 8em 8em;
@@ -93,6 +110,7 @@ $aqua: #07c5ff;
 margin: 0 auto;
   max-width: 306px;
   text-align: center;
+  
   a {
   width: 100%;
   }
@@ -127,8 +145,20 @@ h4#add-text {
   position: absolute;
   margin-left: 10px;
 }
+// faces#index
+
 #index-faces {
   margin-top: 20px;
+}
+a.selected {
+  color: #a0a0a0;
+  text-decoration: underline;
+}
+#directory {
+  text-align: center;
+  li {
+    list-style: none;
+  }
 }
 .digg_pagination {
   background: transparent;
@@ -289,3 +319,9 @@ h4#add-text {
   margin-top: 10px;
   color: #79a37e;
 }
+#title {
+  text-align: center;
+  margin: 0 auto;
+  clear: both;
+}
+

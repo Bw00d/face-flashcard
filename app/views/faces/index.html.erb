@@ -1,7 +1,12 @@
 <%= content_for :title, 'All faces' %>
 
 <div class="row">
-	<div id="index-faces" class="small-12 medium-10 large-8 columns medium-centered large-centered">
+	<div id="title">
+		<h1>
+			<%= link_to "PHOTOS", 'javascript:;', class: 'index-link selected' %> / <%= link_to "DIRECTORY", 'javascript:;', class: 'index-link' %>
+		</h1>
+	</div>
+	<div id="index-faces" class="index-block small-12 medium-10 large-8 columns medium-centered large-centered">
 		<div class="row">
 			<% @faces.each do |face| %>
 			<div class="small-12 small-centered medium-10 large-8 columns">
@@ -14,14 +19,29 @@
 			<% end %>
 
 		</div>
+	</div>
+	<div id="directory" class="index-block small-5 medium-3 large-2 columns small-centered medium-centered large-centered hide">
+		<div class="row">
+			<ul>
+				<% @faces.sort.each do |face| %>
+				<li><%= link_to face.name, face_path(face) %></li>
+				<% end %>
+			</ul>
+		</div>
+	</div>
 	<div class="pagination">
 		<%= will_paginate @faces, class: 'digg_pagination' %>
-	</div>
 	</div>
 		<div id="study-button">
 			<%= link_to "STUDY", learn_path, class: "button radius success " %>
 		</div>
 		<div id="new-face-button">
-			<%= link_to "ADD FACE", new_face_path, class: "button radius" %>
+			<%= link_to "ADD CARD", new_face_path, class: "button radius" %>
 		</div>
 </div>
+<script type="text/javascript">
+	$('.index-link').click(function() {
+		$('.index-link').toggleClass('selected');
+		$('.index-block').toggleClass('hide');
+	});
+</script>
