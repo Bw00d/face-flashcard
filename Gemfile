@@ -9,14 +9,15 @@ gem "font-awesome-rails"
 gem 'jbuilder', '~> 2.0'
 gem "paperclip", "~> 4.2"
 gem 'will_paginate'
+gem 'devise'
+gem 'foundation-rails'
+gem 'pg'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'dotenv-rails'
 end
-gem 'devise'
-gem 'foundation-rails'
-gem 'pg'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
