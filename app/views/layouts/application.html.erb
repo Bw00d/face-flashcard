@@ -17,6 +17,11 @@
     <main class="small-12 columns role="main">
        <%= render 'layouts/messages' %>
        <%= yield %>
+     <footer>
+      <div class="bug-report right">
+        <%= fa_icon 'bug' %> <%= link_to "report an issue", new_bug_path %>
+      </div>
+     </footer>    
     </main>
   </body>
 </html>

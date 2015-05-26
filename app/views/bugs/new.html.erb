@@ -1,0 +1,17 @@
+<%= content_for(:title, "New Bug Report") %>
+
+<div id="new-bug">
+  <div class="row">
+    <div class="12-small columns medium-10 medium-centered large-8 columns large-centered">
+
+    <h4 class="text-centered">Report An Issue</h4>
+      <%= form_for @bug do |f| %>
+        <%= f.text_area :message, rows: 10, placeholder: "Describe the issue. Be sure to include what operating system you are using and type of devise.", class: 'radius' %>
+        <div class="text-centered">
+        <%= f.submit 'Submit', class: 'button small aqua radius' %>
+      <% end %>
+        </div>
+    </div>
+  </div>
+
+</div>

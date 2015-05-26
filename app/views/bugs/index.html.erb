@@ -1,0 +1,26 @@
+<%= content_for(:title, "Bug Reports") %>
+
+<div class="page">
+  <div class="row">
+    <h4 class="text-centered">Bug Reports</h4>
+  </div>
+  <div id="bugs" class="small-12 columns">
+    <% @bugs.each do |bug| %>
+    <strong><span class="bug-date"><%= bug.created_at.strftime("%B %d") %></span></strong>
+      <p>
+        <%= simple_format(bug.message) %>
+      </p>
+        <%= form_for bug , html: { method: "patch" }, remote: true do |f| %>
+          <div class='fixed-bug'><span class="small">Fixed</span> <%= f.check_box :fixed %></div>
+        <% end %>
+    <% end %>
+  </div>
+</div>
+
+<%= will_paginate @bugs, class: 'digg_pagination' %>
+
+<script type="text/javascript">
+	$('.fixed-bug').click( function() {
+	    $(this).parent('form').submit();
+	});
+</script>

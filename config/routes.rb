@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "registrations" }
   resources :users
   resources :faces
+  resources :bugs, only: [:create, :new, :index, :update]
   resources  :invitations, only: [:new, :create, :update]
 
   get 'learn' => 'faces#learn'
