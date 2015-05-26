@@ -2,6 +2,7 @@ class Face < ActiveRecord::Base
 	validates :name, presence: true
 	validates :agency, presence: true
 
-	has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+	has_attached_file :avatar, :url =>':s3_domain_url', :path => '/:class/:attachment/:id_partition/:style/:filename',
+  :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 end
