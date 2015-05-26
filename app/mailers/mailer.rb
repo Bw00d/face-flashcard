@@ -1,5 +1,5 @@
 class Mailer < ApplicationMailer
-	default from: "from@example.com"
+	default from: "welcom@fire-faces.herokuapp.com"
 	
   def invitation(invitation)
   	@invitation = invitation
