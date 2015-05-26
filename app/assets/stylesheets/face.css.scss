@@ -348,5 +348,19 @@ a.selected {
   text-align: center;
   margin: 0 auto;
   clear: both;
+  h1 {
+   color: #fd2940;
+    font-weight: bolder;
+  }
 }
+#slideshow {
+  margin: 20px 0;
+  .show-avatar {
+    margin-bottom: 75px;
+  }
+  h3 {
+    color: $aqua;
+  }
+}
+
 

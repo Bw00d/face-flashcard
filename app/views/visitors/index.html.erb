@@ -1,11 +1,11 @@
 <div  class="row">
 	<header id="title">
-		<h1>Fire Faces</h1>
+		<h1>Alaska Fire Faces</h1>
 	</header>
 	<% if user_signed_in? %>
 		<div id="home-message" class="small-12 medium-8 large-8 columns medium-centered large-centered text-center">
 			<h3>Welcome. Now you can start studying or add some new cards. Have fun.</h3>
-			
+
 		</div>
 		<div class="button-group">
 			<div id="study-button">
@@ -17,7 +17,18 @@
 		</div>
 		<% else %>
 		<section id="welcome-page" class="small-12 medium-10 large-8 columns large-centered text-center">
-			<h3>Flash cards to help learn who the folks in the wildland fire environment.</h3>
+			<h3>Flash cards to help learn the folks in the wildland fire environment.</h3>
+			<div id="slideshow">
+	     	<h3>Guess Who?</h3>
+				<div class="cycle-slideshow show-avatar">
+			    <%= image_tag 'louis.jpg' %>
+			    <%= image_tag 'ben.jpg' %>
+			    <%= image_tag 'tim.jpg' %>
+			    <%= image_tag 'tylan.gif' %>
+			    <%= image_tag 'bwood.jpg' %>
+			    <%= image_tag 'nate.jpg' %>
+				</div>
+			</div>
 		<div id="new-face-button" >
 			<%= link_to "GET ACCESS", 'javascript:;', class: "button radius" %>
 		</div>
