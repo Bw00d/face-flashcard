@@ -27,7 +27,7 @@ Rails.application.configure do
   }
 
   # config.action_mailer.default_url_options = { host: 'https://www.firecall.org'}
-  config.action_mailer.default_url_options = { host: 'https://staging-firecall.herokuapp.com'}
+  config.action_mailer.default_url_options = { host: 'https://fire-faces.herokuapp.com'}
 
   # Code is not reloaded between requests.
   config.cache_classes = true
