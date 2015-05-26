@@ -16,7 +16,7 @@
 			<div id="choices">
 				<ul>
 					<% @choices.shuffle.each do |choice| %>
-						<li><h5><%= link_to (choice), 'javascript:;' %></h5></li>
+						<li class="choice"><h5><%= link_to (choice), 'javascript:;' %></h5></li>
 					<% end %>
 				</ul>
 			</div>
@@ -29,7 +29,7 @@
 <script type="text/javascript">
 // var audio = new Audio('/app/assets/sounds/Basso.aiff');
 var face = '<%= j @face.name %>';
-$('li').click(function() {
+$('.choice').click(function() {
 	if ($(this).text() === face ) {
 		$(this).children().prepend('<%= fa_icon "check", class: 'icon correct' %>');
 	} else {
