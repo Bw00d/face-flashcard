@@ -20,7 +20,6 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address: "smtp.sendgrid.net",
     port: 587,
-    # domain: "www.firecall.org",
     domain: "fire-faces.herokuapp.com",
     authentication: "plain",
     enable_starttls_auto: true,
@@ -28,7 +27,6 @@ Rails.application.configure do
     password:  ENV["SENDGRID_PASSWORD"]
   }
 
-  # config.action_mailer.default_url_options = { host: 'https://www.firecall.org'}
   config.action_mailer.default_url_options = { host: 'https://fire-faces.herokuapp.com'}
 
   # Code is not reloaded between requests.
