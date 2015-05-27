@@ -3,6 +3,6 @@ class Mailer < ApplicationMailer
 	
   def invitation(invitation)
   	@invitation = invitation
-    mail(to: invitation.recipient_email, subject: 'Invitation to Fire Faces')
+    mail(to: invitation.recipient_email, subject: 'Invitation to Alaska Fire Faces')
   end
 end
