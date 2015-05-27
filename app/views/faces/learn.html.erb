@@ -9,7 +9,7 @@
 			</div>
 				<div>
 			    <div class="show-avatar">
-			      <%= link_to (image_tag @face.avatar.url, id: 'avatar-image'), face_path(@face) %>
+			      <%= link_to (image_tag @face.avatar.url(:medium), id: 'avatar-image'), face_path(@face) %>
 			    </div>
 				</div>
 			</div> 
