@@ -9,7 +9,7 @@
 	<div id="index-faces" class="index-block small-12 medium-10 large-8 columns medium-centered large-centered">
 		<div class="row">
 			<% @faces.each do |face| %>
-			<div class="small-12 small-centered medium-10 large-8 columns">
+			<div id="avatar-holder" class="small-12 small-centered medium-10 large-8 columns">
 				<div>
 			    <div class="index-avatar">
 			      <%= link_to (image_tag face.avatar.url(:thumb)), face %>
