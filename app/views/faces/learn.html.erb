@@ -16,7 +16,7 @@
 			<div id="choices">
 				<ul>
 					<% @choices.shuffle.each do |choice| %>
-						<li class="choice"><h5><%= link_to (choice), 'javascript:;' %></h5></li>
+						<li class="choice"><h5><%= link_to (choice.name), 'javascript:;' %></h5></li>
 					<% end %>
 				</ul>
 			</div>

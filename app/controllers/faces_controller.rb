@@ -36,13 +36,8 @@ class FacesController < ApplicationController
 	end
 
 	def learn
-		offset = rand(Face.count)
-		offset1 = rand(Face.count)
-		offset2 = rand(Face.count)
-		@face = Face.offset(offset).first
-		@choices = [Face.offset(offset).first.name,
-								Face.offset(offset1).first.name,
-								Face.offset(offset2).first.name]
+		@choices = Face.all.sample(3)
+		@face = @choices.first
 	end
 
 	private
