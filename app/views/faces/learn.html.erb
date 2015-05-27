@@ -1,3 +1,4 @@
+
 <%= content_for :title, "Learn" %>
 
 <div class="row">
@@ -26,15 +27,17 @@
 		</div>
 	</div>
 </div>
-<script type="text/javascript">
-// var audio = new Audio('/app/assets/sounds/Basso.aiff');
+<%= audio_tag "error.mp3", id: 'error_sound', autoplay: false %>
+<%= audio_tag "correct.mp3", id: 'correct_sound', autoplay: false %>
+<script>
 var face = '<%= j @face.name %>';
 $('.choice').click(function() {
 	if ($(this).text() === face ) {
 		$(this).children().prepend('<%= fa_icon "check", class: 'icon correct' %>');
+		$('#correct_sound')[0].play();
 	} else {
 		$(this).children().prepend('<%= fa_icon "times", class: 'icon wrong' %>');
-		// audio.play();
+		$('#error_sound')[0].play();
 	}
 
 	
