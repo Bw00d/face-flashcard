@@ -26,13 +26,13 @@
 	<div id="directory" class="index-block small-10  columns small-centered medium-centered large-centered hide">
 		<div class="row">
 			<ul>
-				<% @faces.sort.each do |face| %>
+				<% @names.each do |face| %>
 				<li><%= link_to face.name, face_path(face) %></li>
 				<% end %>
 			</ul>
 		</div>
 	<div class="pagination">
-		<%= will_paginate @faces, class: 'digg_pagination' %>
+		<%= will_paginate @names, class: 'digg_pagination' %>
 	</div>
 	</div>
 		<div id="study-button">
