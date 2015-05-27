@@ -19,8 +19,11 @@
 			<% end %>
 
 		</div>
+		<div class="pagination">
+			<%= will_paginate @faces, class: 'digg_pagination' %>
+		</div>
 	</div>
-	<div id="directory" class="index-block small-12  columns small-centered medium-centered large-centered hide">
+	<div id="directory" class="index-block small-10  columns small-centered medium-centered large-centered hide">
 		<div class="row">
 			<ul>
 				<% @faces.sort.each do |face| %>
@@ -28,9 +31,9 @@
 				<% end %>
 			</ul>
 		</div>
-	</div>
 	<div class="pagination">
 		<%= will_paginate @faces, class: 'digg_pagination' %>
+	</div>
 	</div>
 		<div id="study-button">
 			<%= link_to "STUDY", learn_path, class: "button radius success " %>
