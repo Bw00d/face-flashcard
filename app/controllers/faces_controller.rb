@@ -1,4 +1,6 @@
 class FacesController < ApplicationController
+	before_filter :signed_in_user, only: [:index, :show, :edit, :update, :destroy]
+
 	def new
 		@face = Face.new
 	end
@@ -40,9 +42,16 @@ class FacesController < ApplicationController
 		@face = @choices.first
 	end
 
+
 	private
 
 	def face_params
 		params.require(:face).permit(:name, :agency, :avatar, :created_by, :edited_by, :position)
 	end
+
+	def signed_in_user
+  	unless user_signed_in?
+  	  redirect_to new_user_session_path, notice: "Please sign in."
+  	end
+  end
 end

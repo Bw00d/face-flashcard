@@ -1,5 +1,6 @@
 class InvitationsController < ApplicationController
-
+  before_filter :signed_in_user, only: [:index, :show, :edit, :update, :destroy]
+  
 	def new
 		@invitation = Invitation.new
 	end
@@ -22,7 +23,12 @@ class InvitationsController < ApplicationController
 
   private
   def invitation_params
-  	params.require(:invitation).permit(:recipient_email, :token)
-  	
+  	params.require(:invitation).permit(:recipient_email, :token)	
+  end
+
+  def signed_in_user
+    unless user_signed_in?
+      redirect_to new_user_session_path, notice: "Please sign in."
+    end
   end
 end

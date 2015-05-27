@@ -1,4 +1,5 @@
 class BugsController < ApplicationController
+  before_filter :signed_in_user, only: [:index, :show, :edit, :update, :destroy]
 
   def new
     @bug = Bug.new
@@ -32,5 +33,11 @@ class BugsController < ApplicationController
 
   def bug_params
     params.require(:bug).permit(:message, :fixed)
+  end
+
+  def signed_in_user
+    unless user_signed_in?
+      redirect_to new_user_session_path, notice: "Please sign in."
+    end
   end
 end
