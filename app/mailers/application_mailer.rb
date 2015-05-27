@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "welcome@fire-faces.herokuapp.com"
+  default from: "Alaska Fire Faces<welcome@fire-faces.herokuapp.com>"
   layout 'mailer'
 end
