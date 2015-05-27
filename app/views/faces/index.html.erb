@@ -6,10 +6,10 @@
 			<%= link_to "PHOTOS", 'javascript:;', class: 'index-link selected' %> / <%= link_to "DIRECTORY", 'javascript:;', class: 'index-link' %>
 		</h1>
 	</div>
-	<div id="index-faces" class="index-block small-12 medium-10 large-10 columns medium-centered large-centered">
+	<div id="index-faces" class="index-block small-12 medium-10 large-10 columns small-centered medium-centered large-centered">
 		<div class="row">
 			<% @faces.each do |face| %>
-			<div id="avatar-holder" class="small-12 small-centered medium-10 large-10 columns">
+			<div id="avatar-holder" class="small-12 small-centered medium-10 large-10 large-centered medium-centered columns">
 				<div>
 			    <div class="index-avatar">
 			      <%= link_to (image_tag face.avatar.url(:thumb)), face %>
