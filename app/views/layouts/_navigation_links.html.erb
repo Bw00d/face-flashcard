@@ -2,7 +2,7 @@
 <% if user_signed_in? %>
   <li><%= link_to 'Add', new_face_path %></li>
   <li><%= link_to 'All', faces_path %></li>
-  <li><%= link_to 'Learn', learn_path %></li>
+  <li><%= link_to 'Study', learn_path %></li>
   <li><%= link_to 'Invite', new_invitation_path %></li>
   <li><%= link_to 'Settings', edit_user_registration_path %></li>
 <% if current_user.admin? %>
