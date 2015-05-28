@@ -23,7 +23,7 @@ class InvitationsController < ApplicationController
 
   private
   def invitation_params
-  	params.require(:invitation).permit(:recipient_email, :token)	
+  	params.require(:invitation).permit(:recipient_email, :token, :confirmed)	
   end
 
   def signed_in_user

@@ -10,12 +10,12 @@ class User < ActiveRecord::Base
 
   private
   def check_invitation
-    token = Invitation.find_by_token(self.invitation_token.strip)
-    if !token.nil?
-      token.update_attributes(confirmed: true)
+    @token = Invitation.find_by_token(self.invitation_token.strip)
+    if !@token.nil?
+      @token.update_attributes(confirmed: true)
       true
     else
-      self.errors.add(:summary, "Invitation token it invalid.")
+      self.errors.add(:summary, "Invitation token is invalid.")
       false 
     end
   end
