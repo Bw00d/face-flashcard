@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
   private
   def check_invitation
-    token = Invitation.find_by_token( self.invitation_token)
+    token = Invitation.find_by_token(self.invitation_token.strip)
     if !token.nil?
       token.update_attributes(confirmed: true)
       true
