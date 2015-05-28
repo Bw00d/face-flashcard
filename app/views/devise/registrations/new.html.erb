@@ -13,7 +13,7 @@
       <%= f.label :password_confirmation %>
       <%= f.password_field :password_confirmation, class: 'form-control radius' %>
       <%= f.label :invitation_token %>
-      <%= f.password_field :invitation_token, class: 'form-control radius' %>
+      <%= f.text_field :invitation_token, class: 'form-control radius' %>
       <%= f.submit 'Sign up', :class => 'button right radius' %>
     </div>
   <% end %>
