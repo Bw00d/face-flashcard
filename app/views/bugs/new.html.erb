@@ -8,10 +8,14 @@
       <%= form_for @bug do |f| %>
         <%= f.text_area :message, rows: 10, placeholder: "Describe the issue. Be sure to include what operating system you are using and type of devise.", class: 'radius' %>
         <div class="text-centered">
-        <%= f.submit 'Submit', class: 'button small aqua radius' %>
+        <%= f.submit 'Submit', class: 'button small aqua radius submit-button' %>
       <% end %>
         </div>
     </div>
   </div>
-
 </div>
+<script type="text/javascript">
+$(document).on("click", ".submit-button", function() {
+    $('#new-bug-form').submit()
+  });
+</script>
