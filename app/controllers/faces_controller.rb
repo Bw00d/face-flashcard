@@ -8,10 +8,13 @@ class FacesController < ApplicationController
 	def index
 		if params[:search]
       @faces = Face.search(params[:search])
-			@names = Face.paginate(:page => params[:page], per_page: 100).order(:name)
+			# @names = Face.paginate(:page => params[:page], per_page: 100).order(:name)
+			@names = Face.all.order(:name)
     else
-			@faces = Face.paginate(:page => params[:page], per_page: 60).order('created_at DESC')
-			@names = Face.paginate(:page => params[:page], per_page: 100).order(:name)
+			# @faces = Face.paginate(:page => params[:page], per_page: 60).order('created_at DESC')
+			# @names = Face.paginate(:page => params[:page], per_page: 100).order(:name)
+			@faces = Face.all
+			@names = Face.all.order(:name)
 		end
 	end
 
