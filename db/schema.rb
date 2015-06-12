@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150526220020) do
+ActiveRecord::Schema.define(version: 20150612181548) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,7 +37,9 @@ ActiveRecord::Schema.define(version: 20150526220020) do
     t.string   "position"
   end
 
+  add_index "faces", ["agency"], name: "index_faces_on_agency", using: :btree
   add_index "faces", ["name"], name: "index_faces_on_name", using: :btree
+  add_index "faces", ["position"], name: "index_faces_on_position", using: :btree
 
   create_table "invitations", force: :cascade do |t|
     t.string   "recipient_email", default: "",    null: false
