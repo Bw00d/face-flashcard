@@ -369,6 +369,10 @@ margin: 5% 2% 0 0;
 #search-form {
   margin-top: 2%;
   text-align: center;
+  i {
+    // font-weight: bold;
+    font-size: 1.3em;
+  }
 }
 i#search-icon {
   color: #CCCCCC;
