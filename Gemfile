@@ -13,7 +13,6 @@ gem 'devise'
 gem 'foundation-rails'
 gem 'pg'
 gem 'aws-sdk', '< 2.0'
-gem 'turbolinks'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
