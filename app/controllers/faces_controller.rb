@@ -46,6 +46,13 @@ class FacesController < ApplicationController
 		end
 	end
 
+	def destroy
+		face = Face.find(params[:id])
+    face.destroy
+    flash[:success] = "Card deleted."
+    redirect_to faces_path
+	end
+
 	def learn
 		@choices = Face.all.sample(3)
 		@face = @choices.first
