@@ -32,6 +32,10 @@
 <script>
 
 var face = '<%= j @face.name %>';
+$('#correct_sound')[0].play();
+$('#correct_sound')[0].pause();
+$('#error_sound')[0].play();
+$('#error_sound')[0].pause();
 $('.choice').click(function() {
 	if ($(this).text() === face ) {
 		$(this).children().prepend('<%= fa_icon "check", class: 'icon correct' %>');
