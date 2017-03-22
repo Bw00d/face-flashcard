@@ -10,7 +10,6 @@ class Face < ActiveRecord::Base
   def self.search(query)
     # where(:title, query) -> This would return an exact match of the query
     # where("position like ? || agency like ? || name like ?", "%#{query}%") 
-    Face.where('name LIKE :query OR agency LIKE :query OR position LIKE :query', query: "%#{query}%")
-    # where(['position LIKE ? OR agency LIKE ?', "%#{query}%"])
+    Face.where('name ilike :query OR agency ilike :query OR position ilike :query', query: "%#{query}%")
   end
 end
