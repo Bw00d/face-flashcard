@@ -6,7 +6,7 @@
 
     <h4 class="text-centered">Report An Issue</h4>
       <%= form_for @bug do |f| %>
-        <%= f.text_area :message, rows: 10, placeholder: "Describe the issue. Be sure to include what operating system you are using and type of devise.", class: 'radius' %>
+        <%= f.text_area :message, rows: 10, placeholder: "Describe the issue. Be sure to include what operating system you are using and type of device.", class: 'radius' %>
         <div class="text-centered">
         <%= f.submit 'Submit', class: 'button small aqua radius submit-button' %>
       <% end %>

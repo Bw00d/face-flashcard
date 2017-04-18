@@ -25,7 +25,7 @@ class FacesController < ApplicationController
 	def create
 		@face = Face.create(face_params)
 		if @face.save
-			flash[:notice] = "That face was added."
+			flash[:notice] = "That card was added."
 			redirect_to @face
 		else
 			render 'new'
@@ -39,7 +39,7 @@ class FacesController < ApplicationController
 	def update
 		@face = Face.find(params[:id])
 		if @face.update_attributes(face_params)
-		  flash.now[:success] = "Face Updated!"
+		  flash.now[:success] = "Card Updated!"
 			redirect_to faces_path(@face)
 		else
 			redirect_to :back
