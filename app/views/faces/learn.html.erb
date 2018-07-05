@@ -31,7 +31,7 @@
 <%= audio_tag "correct.mp3", id: 'correct_sound', autoplay: false %>
 <script>
 
-("div#choices").hide();
+$("div#choices").hide();
     // .delay(5000).fadeIn('slow');
 
     var face = '<%= j @face.name %>';
