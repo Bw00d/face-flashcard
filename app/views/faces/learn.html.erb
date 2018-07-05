@@ -45,8 +45,6 @@ $('.choice').click(function() {
 	
 });
 
-$( "#choices" ).fadeIn( "slow", function() {
-    // Animation complete
-  });
+('#choices').html(response).css({'opacity':0}).animate({'opacity':1});
 
 </script>
