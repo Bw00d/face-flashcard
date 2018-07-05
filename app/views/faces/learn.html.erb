@@ -31,10 +31,7 @@
 <%= audio_tag "correct.mp3", id: 'correct_sound', autoplay: false %>
 <script>
 
-$("div#choices").hide();
-    // .delay(5000).fadeIn('slow');
-
-    var face = '<%= j @face.name %>';
+var face = '<%= j @face.name %>';
 
 $('.choice').click(function() {
 	if ($(this).text() === face ) {
@@ -48,5 +45,11 @@ $('.choice').click(function() {
 	
 });
 
+
+$(document).ready(function() {
+    $("div#choices").hide();
+    // .delay(5000).fadeIn('slow');
+
+});
 
 </script>
