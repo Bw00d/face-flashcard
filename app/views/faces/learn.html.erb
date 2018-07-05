@@ -45,6 +45,10 @@ $('.choice').click(function() {
 	
 });
 
-('#choices').html(response).css({'opacity':0}).animate({'opacity':1});
+
+$(document).ready(function() {
+    ("#choices").hide().delay(5000).fadeIn('slow');
+
+});
 
 </script>
